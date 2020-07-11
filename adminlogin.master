@@ -1,0 +1,40 @@
+﻿<%@ Master Language="VB" CodeFile="adminlogin.master.vb" Inherits="adminlogin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="stylesheet/main.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <center> 
+       <form id="form2" runat="server">
+    <div class="wrapper">
+        <div class="menu">
+            <ul>
+                <li><asp:Image ID="Image2" runat="server" Width="136px" Height="60px" 
+                        ImageUrl="~/boot/companylogo3.jpg" style="margin-left: 0px"></asp:Image></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="content">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear"></div>
+        <div class="footer">
+                <h7>Devloped And Maintained By Pritam Ghosh;
+               Contact:pritghosh96@gmail.com</h7>
+        </div>
+    </div>
+    </form>
+  </center>
+</body>

@@ -1,0 +1,42 @@
+﻿<%@ Master Language="VB" CodeFile="usrcontrol.master.vb" Inherits="usrcontrol" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="stylesheet/main.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <center> 
+       <form id="form1" runat="server" method="post">
+    <div class="wrapper">
+        <div class="menu">
+            <ul>
+                <li><asp:Image ID="Image2" runat="server" Width="136px" Height="60px" 
+                        ImageUrl="~/boot/companylogo3.jpg" style="margin-left: 0px"></asp:Image></li>
+                <li></li>
+                <li></li>
+                <li><a class="ex1" href="usr_keyinfo.aspx">Key Info</a></li>
+                <li><a class="ex1" href="usr_logout.aspx">Logout</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="content">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear"></div>
+        <div class="footer">
+                 <h7>Devloped And Maintained By Pritam Ghosh;
+               Contact:pritghosh96@gmail.com</h7>
+        </div>
+    </div>
+    </form>
+  </center>
+</body>
+</html>
+

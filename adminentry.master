@@ -1,0 +1,94 @@
+﻿<%@ Master Language="VB" CodeFile="adminentry.master.vb" Inherits="adminentry" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link href="stylesheet/main1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <center> 
+       <form id="form1" runat="server">
+    <div class="wrapper">
+        <div class="menu">
+            <ul>
+                <li><asp:Image ID="Image1" runat="server" Width="136px" Height="60px" 
+                        ImageUrl="~/boot/companylogo3.jpg" style="margin-left: 0px"></asp:Image></li>
+                  <li></li>
+                <li><a class="ex1" href="districtentry.aspx">District</a></li>
+                <li><a class="ex1" href="subdivitionentry.aspx">Sdivition</a></li>
+                <li><div class="container">
+                <div class="dropdown">
+                    <asp:Button ID="Button2" runat="server" Text="Notification" 
+                    class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                    BackColor="white" ForeColor="#0099FF"   Height="60px" 
+                    Style="border:none !important;outline :none !important  " Font-Size="Small"></asp:Button>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="notific_category.aspx">Notification Category</a>
+                    <a class="dropdown-item" href="notific_details.aspx">Notification Details</a>
+                    </div>
+                  </div>
+                </div>
+                </li>
+
+
+                 <li><div class="container">
+                <div class="dropdown">
+                    <asp:Button ID="Button1" runat="server" Text="Employee" 
+                    class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                    BackColor="white" ForeColor="#0099FF"   Height="60px" 
+                    Style="border:none !important;outline :none !important  " Font-Size="Small"></asp:Button>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="recordsearch.aspx">Employee Record</a>
+                    <a class="dropdown-item" href="emp_desig_category.aspx">Designation Entry</a>
+                    <a class="dropdown-item" href="emp_status.aspx">Employee Status</a>
+                    </div>
+                  </div>
+                </div>
+                </li>
+                 <li><div class="container">
+                <div class="dropdown">
+                    <asp:Button ID="Button3" runat="server" Text="Project" 
+                    class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+                    BackColor="white" ForeColor="#0099FF"   Height="60px" 
+                    Style="border:none !important;outline :none !important  " Font-Size="Small"></asp:Button>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="project_details.aspx">Project Entry</a>
+                    <a class="dropdown-item" href="task_assign.aspx">Task Assign</a>
+                    </div>
+                  </div>
+                </div>
+                </li>
+               
+                
+               
+                <li><a class="ex1" href="admin_logout.aspx">logout</a></li>
+           </ul>
+        </div>
+        <div class="clear"></div>
+        <div class="content">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+          <div class="clear"></div>
+        <div class="footer">
+               <h7>Devloped And Maintained By Pritam Ghosh;
+               Contact:pritghosh96@gmail.com</h7>
+        </div>
+    </div>
+    </form>
+  </center>
+</body>
+</html>
+
+
