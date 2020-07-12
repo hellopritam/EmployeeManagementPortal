@@ -1,0 +1,13 @@
+create table employee(eid varchar(50),ename varchar(50),mobile_no varchar(50),email varchar(50),faddress varchar(50),dob varchar(50),district varchar(50),sdivition varchar(50),language varchar(50),gender varchar(50),password varchar(50),status varchar(50),designation_id varchar(50),pic image,primary key(eid))
+create table notification_category(id varchar(50),notifi_category_id varchar(50),notifi_category_desc varchar(50),notifi_category_status varchar(50),primary key(notifi_category_id))
+create table notification(id varchar(50),notifi_id varchar(50),notifi_desc varchar(50),notifi_date datetime,notifi_status varchar(50),notifi_category_id varchar(50),pdf_location varchar(max),primary key(notifi_id),foreign key(notifi_category_id) references notification_category(notifi_category_id))
+create table emp_desig(id varchar(50),emp_desig_id varchar(50),emp_desig_desc varchar(50),emp_desig_status varchar(50),primary key(emp_desig_id))
+create table module(id varchar(50),module_code varchar(50),module_desc varchar(50),primary key(module_code))
+create table task(id varchar(50),task_code varchar(50),desig_id varchar(50),emp_id varchar(50),proj_code varchar(50),module_code varchar(50),
+task_desc varchar(50),from_date varchar(50),to_date varchar(50),working_status varchar(50),task_desc_path varchar(max),primary key(task_code),foreign key(desig_id) references emp_desig(emp_desig_id),
+foreign key(emp_id) references employee(eid),foreign key(module_code) references module(module_code))
+create table admin_login(uid varchar(50),password varchar(50),admin_name varchar(50),pic image,primary key(uid))
+create table odit_log(user_id varchar(50),datetime_login varchar(50),progress varchar(50),ip_address varchar(50))
+create table district4(code varchar(50) primary key,name varchar(50))
+create table subdivision(code varchar(50),scode varchar(50),sname varchar(50),primary key(scode))
+create table project(id varchar(50),proj_code varchar(50),proj_desc varchar(50),primery key(proj_code))
